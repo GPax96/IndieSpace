@@ -6,43 +6,54 @@
       <meta name="viewport" content="width=device-width, initial-scale=1.0" />
       <title>Indie Space</title>
       <link rel="stylesheet" href="../node_modules/picnic/picnic.min.css" />
+      <link rel="stylesheet" href="css/mavo-uncompressed.css" />
       <link rel="stylesheet" href="css/style.scss" />
+      <script src="js/mavo-uncompressed.js"></script>
+      <script src="js/mavo-tinymce.js"></script>
    </head>
    <body>
-      <main>
+      <main
+         mv-app="indieSpace"
+         mv-storage="local"
+         mv-autosave="0"
+         mv-plugins="tinymce"
+      >
          <header>
+            <!-- POSTER -->
             <div class="poster stack">
                <img
+                  property="poster"
                   src="img/placeholders/poster800x260.jpg"
                   alt="poster image"
                />
             </div>
+
+            <!-- UNDER POSTER SECTION -->
             <div class="sub-poster stack">
                <div class="flex two" id="profile-picture__container">
+                  <!-- PROFILE PICTURE -->
                   <div class="profile-picture">
                      <img
+                        property="profilePicture"
                         src="img/placeholders/profile200x200.jpg"
                         alt="profile/logo image"
                      />
                   </div>
+
+                  <!-- SPACE TITLE -->
                   <div class="title">
-                     <h1>Indie Space title here</h1>
+                     <h1 property="spaceTitle">Space title goes here</h1>
                   </div>
                </div>
             </div>
          </header>
-         <section class="intro">
-            <p>
-               Here goes the intro, it will be possible to add a little
-               introduction to the space using markdown.
-            </p>
-            <p>
-               Of course some dummy text... <br />Ab illo tempore, ab est sed
-               immemorabili. Cum sociis natoque penatibus et magnis dis
-               parturient. Quam diu etiam furor iste tuus nos eludet? Ut enim ad
-               minim veniam, quis nostrud exercitation.
-            </p>
+
+         <!-- INTRO SECTION -->
+         <section class="intro tinymce" property="spaceIntro">
+            <p>edit text.</p>
          </section>
+
+         <!-- HORIZONTAL MENU -->
          <section class="features">
             <div class="js-tabs" id="tabs">
                <div class="js-tabs__header scrollmenu">
@@ -50,13 +61,15 @@
                   <span class="js-tabs__title">Contacts</span>
                   <span class="js-tabs__title">Posts</span>
                   <span class="js-tabs__title">Photos</span>
-                  <span class="js-tabs__title">Another Section</span>
+                  <!-- <span class="js-tabs__title">Another Section</span>
                   <span class="js-tabs__title">Another Feature</span>
                   <span class="js-tabs__title">Thigs to Test</span>
-                  <span class="js-tabs__title">Last One I Swear</span>
+                  <span class="js-tabs__title">Last One I Swear</span> -->
                </div>
-               <div class="js-tabs__content">
-                  <h2>Bio</h2>
+
+               <!-- BIO SECTOR -->
+               <div class="js-tabs__content" id="bio_sector">
+                  <h2 id="Bio">Bio</h2>
                   <p>
                      Shabby chic ennui cred godard, forage roof party scenester
                      health goth typewriter pitchfork. Stumptown whatever fap,
@@ -66,8 +79,10 @@
                      it migas forage trust fund.
                   </p>
                </div>
-               <div class="js-tabs__content">
-                  <h2>Contacts</h2>
+
+               <!-- CONTACT SECTOR-->
+               <div class="js-tabs__content" id="contacts_sector">
+                  <h2 id="Contacts">Contacts</h2>
                   <p>
                      Shabby chic cred godard, forage roof party scenester health
                      goth typewriter pitchfork. Stumptown whatever fap, austin
@@ -77,8 +92,10 @@
                      forage trust fund.
                   </p>
                </div>
-               <div class="js-tabs__content">
-                  <h2>Posts</h2>
+
+               <!-- POSTS SECTOR -->
+               <div class="js-tabs__content" id="posts_sector">
+                  <h2 id="Posts">Posts</h2>
                   <ul>
                      <li>Post 1</li>
                      <li>Post 2</li>
@@ -87,8 +104,10 @@
                      <li>Post 5</li>
                   </ul>
                </div>
-               <div class="js-tabs__content">
-                  <h2>Photos</h2>
+
+               <!-- PHOTOS SECTOR -->
+               <div class="js-tabs__content" id="photos_sector">
+                  <h2 id="Photos">Photos</h2>
                   <p>
                      Meggings distillery pop-up artisan, hashtag 90's echo park
                      kickstarter gluten-free. Pinterest gentrify squid vinyl
@@ -138,6 +157,7 @@
                      it migas forage trust fund.
                   </p>
                </div>
+
                <div class="js-tabs__content">
                   <h2>Another Section</h2>
                   <p>

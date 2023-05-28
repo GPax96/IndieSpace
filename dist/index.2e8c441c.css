@@ -12,6 +12,7 @@ main {
   background-color: #f1f1f1;
   border-left: 1px solid #e7e7e7;
   border-right: 1px solid #e7e7e7;
+  position: relative;
   box-shadow: 0 0 4px 4px #0000001a;
 }
 
@@ -118,6 +119,7 @@ section.features {
 
 .js-tabs__header {
   background-color: #f1f1f1;
+  border-bottom: 1px solid #ccc;
   position: sticky;
   top: 0;
   overflow: auto;
@@ -125,7 +127,6 @@ section.features {
 
 .js-tabs__header span {
   color: #0074d9;
-  margin-bottom: -1px;
   display: inline-block;
 }
 
@@ -143,6 +144,7 @@ section.features {
 .js-tabs__title-active {
   background: #f1f1f1;
   border-top: 2px solid #0074d9;
+  border-bottom: 2px solid #0074d9;
 }
 
 .js-tabs__content {
@@ -162,6 +164,15 @@ div.scrollmenu a {
   padding: 14px;
   text-decoration: none;
   display: inline-block;
+}
+
+.mv-bar.mv-ui:not(.mv-fixed) {
+  position: absolute;
+  right: 1rem;
+}
+
+.mce-content-body {
+  line-height: 1.7;
 }
 
 /*# sourceMappingURL=index.2e8c441c.css.map */

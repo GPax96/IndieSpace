@@ -16,6 +16,7 @@ body {
 } */
 
 main {
+   position: relative;
    background-color: $bgColor;
    max-width: 100%;
    height: 100%;
@@ -133,10 +134,11 @@ section.features {
    position: sticky;
    top: 0;
    background-color: $bgColor;
+   border-bottom: 1px solid #ccc;
 }
 .js-tabs__header span {
    display: inline-block;
-   margin-bottom: -1px;
+   /* margin-bottom: -1px; */
    color: #0074d9;
 }
 
@@ -152,6 +154,7 @@ section.features {
 .js-tabs__title-active {
    background: $bgColor;
    border-top: 2px solid #0074d9;
+   border-bottom: 2px solid #0074d9;
 }
 .js-tabs__content {
    line-height: 1.5;
@@ -170,4 +173,14 @@ div.scrollmenu a {
    text-align: center;
    padding: 14px;
    text-decoration: none;
+}
+
+// MAVO OVERRIDES
+.mv-bar.mv-ui:not(.mv-fixed) {
+   position: absolute;
+   right: 1rem;
+}
+
+.mce-content-body {
+   line-height: 1.7;
 }
