@@ -10,6 +10,7 @@
     "parcel": "^2.8.3"
   },
   "dependencies": {
+    "alpinejs": "^3.12.1",
     "picnic": "^7.1.0"
   }
 }

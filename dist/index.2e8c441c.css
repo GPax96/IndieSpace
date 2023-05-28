@@ -1,0 +1,167 @@
+body {
+  height: auto;
+  background-color: #f1f1f1;
+  justify-content: center;
+  line-height: 1.7;
+  display: flex;
+}
+
+main {
+  max-width: 100%;
+  height: 100%;
+  background-color: #f1f1f1;
+  border-left: 1px solid #e7e7e7;
+  border-right: 1px solid #e7e7e7;
+  box-shadow: 0 0 4px 4px #0000001a;
+}
+
+@media (width >= 800px) {
+  main {
+    max-width: 800px;
+    background-color: #f1f1f1;
+  }
+}
+
+header {
+  display: block;
+}
+
+@media (width >= 800px) {
+  .poster {
+    height: 260px;
+  }
+}
+
+.poster > img {
+  width: 100%;
+  height: auto;
+}
+
+@media (width >= 800px) {
+  .poster > img {
+    width: 100%;
+    height: 260px;
+  }
+}
+
+#profile-picture__container {
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  padding-left: 1rem;
+}
+
+.profile-picture {
+  width: 30%;
+}
+
+.profile-picture > img {
+  width: 100%;
+  border: 5px solid #fff;
+  border-radius: 16%;
+  margin-top: -25%;
+}
+
+@media (width >= 800px) {
+  .profile-picture > img {
+    width: 200px;
+  }
+}
+
+.title {
+  width: 70%;
+  flex-wrap: wrap;
+  place-content: center;
+  margin-bottom: 1.5rem;
+  margin-right: 1.5rem;
+  display: flex;
+}
+
+.title > h1 {
+  padding: 0;
+  font-size: 1.4rem;
+  line-height: 1.2;
+}
+
+@media (width >= 460px) {
+  .title > h1 {
+    font-size: 1.8rem;
+  }
+}
+
+@media (width >= 600px) {
+  .title > h1 {
+    font-size: 2.2rem;
+  }
+}
+
+@media (width >= 768px) {
+  .title > h1 {
+    padding-top: .6rem;
+    font-size: 2.8rem;
+  }
+}
+
+.intro {
+  border-bottom: 1px solid #ccc;
+  padding: 0 1.8rem;
+}
+
+section.features {
+  z-index: 10;
+  position: relative;
+}
+
+.js-tabs {
+  max-width: 100%;
+  margin: 0;
+}
+
+.js-tabs__header {
+  background-color: #f1f1f1;
+  position: sticky;
+  top: 0;
+  overflow: auto;
+}
+
+.js-tabs__header span {
+  color: #0074d9;
+  margin-bottom: -1px;
+  display: inline-block;
+}
+
+.js-tabs__title {
+  cursor: pointer;
+  background: #f1f1f1;
+  padding: 1rem;
+  display: inline-block;
+}
+
+.js-tabs__title:hover {
+  text-decoration: none;
+}
+
+.js-tabs__title-active {
+  background: #f1f1f1;
+  border-top: 2px solid #0074d9;
+}
+
+.js-tabs__content {
+  border-top: 1px solid #ccc;
+  padding: 1em 2em 3em;
+  line-height: 1.5;
+}
+
+div.scrollmenu {
+  white-space: nowrap;
+  overflow-x: auto;
+  overflow-y: hidden;
+}
+
+div.scrollmenu a {
+  text-align: center;
+  padding: 14px;
+  text-decoration: none;
+  display: inline-block;
+}
+
+/*# sourceMappingURL=index.2e8c441c.css.map */

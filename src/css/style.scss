@@ -1,17 +1,32 @@
+$bgColor: #f1f1f1;
+$borderColor: #e7e7e7;
+
 body {
-   background-color: black;
+   background-color: $bgColor;
    display: flex;
    justify-content: center;
+   line-height: 1.7;
+   height: auto;
 }
 
+/* @media all and (min-width: 768px) {
+   p {
+      font-size: 1.2rem;
+   }
+} */
+
 main {
-   background-color: antiquewhite;
-   width: auto;
+   background-color: $bgColor;
+   max-width: 100%;
+   height: 100%;
+   border-left: 1px $borderColor solid;
+   border-right: 1px $borderColor solid;
+   box-shadow: 0px 0px 4px 4px rgba(0, 0, 0, 0.1);
 }
 
 @media all and (min-width: 800px) {
    main {
-      background-color: antiquewhite;
+      background-color: $bgColor;
       max-width: 800px;
    }
 }
@@ -35,7 +50,6 @@ header {
    .poster > img {
       width: 100%;
       height: 260px;
-      border-radius: 6px;
    }
 }
 
@@ -74,24 +88,86 @@ header {
 
 .title > h1 {
    padding: 0;
-   font-size: 1.2rem;
+   font-size: 1.4rem;
+   line-height: 1.2;
 }
 
 @media all and (min-width: 460px) {
    .title > h1 {
-      font-size: 1.6rem;
+      font-size: 1.8rem;
    }
 }
 
 @media all and (min-width: 600px) {
    .title > h1 {
-      font-size: 2rem;
+      font-size: 2.2rem;
    }
 }
 
 @media all and (min-width: 768px) {
    .title > h1 {
-      font-size: 2.6rem;
+      font-size: 2.8rem;
       padding-top: 0.6rem;
    }
+}
+
+.intro {
+   padding: 0 1.8rem;
+   border-bottom: 1px solid #ccc;
+}
+
+section.features {
+   position: relative;
+   z-index: 10;
+}
+
+/* TABS */
+
+.js-tabs {
+   margin: 0;
+   max-width: 100%;
+}
+.js-tabs__header {
+   overflow: auto;
+   position: -webkit-sticky;
+   position: sticky;
+   top: 0;
+   background-color: $bgColor;
+}
+.js-tabs__header span {
+   display: inline-block;
+   margin-bottom: -1px;
+   color: #0074d9;
+}
+
+.js-tabs__title {
+   display: inline-block;
+   background: $bgColor;
+   cursor: pointer;
+   padding: 1rem 1rem;
+}
+.js-tabs__title:hover {
+   text-decoration: none;
+}
+.js-tabs__title-active {
+   background: $bgColor;
+   border-top: 2px solid #0074d9;
+}
+.js-tabs__content {
+   line-height: 1.5;
+   border-top: 1px solid #ccc;
+   padding: 1em 2em 3em;
+}
+
+div.scrollmenu {
+   overflow-y: hidden; /* Hide vertical scrollbar */
+   overflow-x: auto; /* Hide horizontal scrollbar */
+   white-space: nowrap;
+}
+
+div.scrollmenu a {
+   display: inline-block;
+   text-align: center;
+   padding: 14px;
+   text-decoration: none;
 }
